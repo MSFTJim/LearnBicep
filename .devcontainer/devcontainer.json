@@ -1,0 +1,24 @@
+{	
+	"name": "MSFTJim Codespace Defaults", 
+	// using CS defaults
+	//"image": "mcr.microsoft.com/dotnet/core/sdk:3.1-bionic",	
+	// "forwardPorts": [5100, 5200], 
+	"extensions": [
+		"eamodio.gitlens",
+		"github.vscode-pull-request-github",
+		"ms-vsliveshare.vsliveshare",
+		"ms-dotnettools.csharp",
+		"ms-vscode.azure-account",
+		"mhutchie.git-graph",
+		"humao.rest-client",
+		"ms-azuretools.vscode-azureappservice",
+		"ms-azuretools.vscode-azureresourcegroups",
+		"ms-mssql.mssql",
+		"alexey-strakh.stackoverflow-search",
+		"tonybaloney.vscode-pets"
+	],
+	//current default CS has everything needed so no extra items to install at this time 1-6-21 
+	//    "dockerFile": "Dockerfile",
+	//"postCreateCommand": "/bin/bash ./.devcontainer/post-create.sh > ~/post-create.log",
+	"containerEnv": { "DOGVAR": "Cosmo" }
+	}
