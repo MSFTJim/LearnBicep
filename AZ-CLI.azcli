@@ -1,0 +1,13 @@
+This is my first line.
+
+az resource list
+az account set --name MSFT-Jamesvac
+az account set --name ME-MngEnvMCAP779795-jamesvac-1
+
+az webapp config show --resource-group myResourceGroup --name <app-name> --query linuxFxVersion
+
+az group create --name myResourceGroup --location "southcentralus" &&
+az deployment group create --resource-group myResourceGroup --template-file <path-to-template>
+
+az group create --name myResourceGroup --location "eastus2" &&
+az deployment group create --resource-group myResourceGroup --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan.bicep
