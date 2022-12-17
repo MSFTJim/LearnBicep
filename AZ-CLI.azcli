@@ -6,8 +6,20 @@ az account set --name ME-MngEnvMCAP779795-jamesvac-1
 
 az webapp config show --resource-group myResourceGroup --name <app-name> --query linuxFxVersion
 
-az group create --name myResourceGroup --location "southcentralus" &&
-az deployment group create --resource-group myResourceGroup --template-file <path-to-template>
+az group create --name myResourceGroup2 --location "centralus" &&
+az deployment group create --resource-group myResourceGroups --template-file <path-to-template>
 
-az group create --name myResourceGroup --location "eastus2" &&
-az deployment group create --resource-group myResourceGroup --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan.bicep
+az group create --name myResourceGroup2 --location "centralus" &&
+az deployment group create --resource-group myResourceGroup2 --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan-Node.bicep
+
+az group create --name myBicepRG --location "eastus2" &&
+az deployment group create --resource-group myBicepRG --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan-DotNet.bicep
+
+-- CLI Test
+az group create --name myCLIRG --location "eastus2" 
+az appservice plan create -g myCLIRG -n MyCLIPlan --is-linux --sku B1
+az webapp create -g myCLIRG -p MyCLIPlan -n jfvGoodGin --runtime "node:18-lts" 
+
+az webapp list-runtimes --os-type linux
+
+
