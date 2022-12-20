@@ -1,5 +1,14 @@
 This is my first line.
 
+az resource list -g myCLIRG --query "[?contains(name, 'jfv')]" -o table
+
+az resource list --query "[?contains(resourcegroup, 'my')]" -o table
+
+
+
+
+az resource list --resource-type 
+
 az resource list --resource-type 
 az resource list --output table
 az account set --name LIVE-JFV-VSE
@@ -18,9 +27,9 @@ az group create --name myBicepRG31 --location "eastus2" &&
 az deployment group create --resource-group myBicepRG31 --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan-DotNet.bicep
 
 -- CLI Test
-az group create --name myCLIRG41 --location "eastus2" 
-az appservice plan create -g myCLIRG41 -n MyCLIPlan41 --is-linux --sku B1
-az webapp create -g myCLIRG41 -p MyCLIPlan41 -n jfvGoodGin41 --runtime "DOTNETCORE:7.0" 
+az group create --name myCLIRG44 --location "eastus2" 
+az appservice plan create -g myCLIRG44 -n MyCLIPlan44 --is-linux --sku B1
+az webapp create -g myCLIRG44 -p MyCLIPlan44 -n jfvGoodGin44 --runtime "DOTNETCORE:7.0" 
 
 az webapp list-runtimes --os-type linux
 
