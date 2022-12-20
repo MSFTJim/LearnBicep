@@ -1,7 +1,9 @@
 This is my first line.
 
-az resource list
-az account set --name MSFT-Jamesvac
+az resource list --resource-type 
+az resource list --output table
+az account set --name LIVE-JFV-VSE
+az account set --name Live-JFV-VSE
 az account set --name ME-MngEnvMCAP779795-jamesvac-1
 
 az webapp config show --resource-group myResourceGroup --name <app-name> --query linuxFxVersion
@@ -12,14 +14,18 @@ az deployment group create --resource-group myResourceGroups --template-file <pa
 az group create --name myResourceGroup2 --location "centralus" &&
 az deployment group create --resource-group myResourceGroup2 --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan-Node.bicep
 
-az group create --name myBicepRG --location "eastus2" &&
-az deployment group create --resource-group myBicepRG --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan-DotNet.bicep
+az group create --name myBicepRG31 --location "eastus2" &&
+az deployment group create --resource-group myBicepRG31 --template-file C:\Users\jamesvac\OneDrive\SW-Projects\Bicep\LearnBicep\AppServicePlan-DotNet.bicep
 
 -- CLI Test
-az group create --name myCLIRG --location "eastus2" 
-az appservice plan create -g myCLIRG -n MyCLIPlan --is-linux --sku B1
-az webapp create -g myCLIRG -p MyCLIPlan -n jfvGoodGin --runtime "node:18-lts" 
+az group create --name myCLIRG41 --location "eastus2" 
+az appservice plan create -g myCLIRG41 -n MyCLIPlan41 --is-linux --sku B1
+az webapp create -g myCLIRG41 -p MyCLIPlan41 -n jfvGoodGin41 --runtime "DOTNETCORE:7.0" 
 
 az webapp list-runtimes --os-type linux
+
+az group create --name myCLIRG2 --location "centralus" 
+az appservice plan create -g myCLIRG2 -n MyCLIPlan2 --is-linux --sku B1
+az webapp create -g myCLIRG2 -p MyCLIPlan2 -n jfvGoodGin2 --runtime "DOTNETCORE|7.0" 
 
 
