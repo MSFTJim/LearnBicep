@@ -4,8 +4,7 @@ az resource list -g myCLIRG --query "[?contains(name, 'jfv')]" -o table
 
 az resource list --query "[?contains(resourcegroup, 'my')]" -o table
 
-
-
+az resource list --query "[].{resource:resourceGroup, name:name}" -o table
 
 az resource list --resource-type 
 
